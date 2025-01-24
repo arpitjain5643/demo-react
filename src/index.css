@@ -25,12 +25,12 @@ a {
 }
 
 .container1 {
-  max-width: 1536px;
+  max-width: 1536px !important;
   padding-left: 16px;
   padding-right: 16px;
-  margin-left: auto;
+  margin-left: auto !important;
   /* background-colo/r: red; */
-  margin-right: auto;
+  margin-right: auto !important;
 }
 
 section {

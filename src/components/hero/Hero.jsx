@@ -26,7 +26,7 @@ const Hero = () => {
 
                 </div>
                 {/* scroll */}
-                <a href='#' >
+                <a href='#' className='scroll' >
                     <svg
                         width="50px"
                         height="50px"
@@ -53,7 +53,11 @@ const Hero = () => {
                     <a href='https://www.instagram.com/rpit.jain'><img src="/instagram.png" alt="instagram" /></a>
                     <a href='https://www.instagram.com/rpit.jain'><img style={{ maxHeight: "30px" }} src="/substack-icon.png" alt="instagram" /></a>
                     <a href='https://www.instagram.com/rpit.jain'><img src="/youtube.png" alt="instagram" /></a>
-
+                   <div className="followTextContainer">
+                    <div className="followText">
+                        FOLLOW ME
+                    </div>
+                   </div>
                 </div>
                 {/* bubble */}
                 <Speech />
@@ -63,7 +67,7 @@ const Hero = () => {
                     Arpit Jain<br /> Designer UI <br /> School pvt. ltd.
                 </div>
                 {/* contact */}
-                <a href="/contact"  className="contact">
+                <a href="/contact"  className="contactLink">
                     <button style={{background:"transparent", border:"none"}} className="contactButton">
                         <svg  viewBox="0 0 200 200" width="150" height="150">
                             <circle cx="100" cy="100" r="90" fill="pink" />
@@ -81,7 +85,7 @@ const Hero = () => {
                                 </textPath>
                             </text>
                         </svg>
-                        <div className="arroe">
+                        <div className="arrow">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
