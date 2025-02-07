@@ -16,7 +16,7 @@ import Service from './components/services/Services';
 function App() {
   return (
     <div className='container1'>
-   <p>Hello Bitches</p>>
+   <p>Hello Bitches</p>
 
 
 
