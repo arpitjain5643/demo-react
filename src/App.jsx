@@ -16,11 +16,7 @@ import Service from './components/services/Services';
 function App() {
   return (
     <div className='container1'>
-      {/* <ParticlesComponent/> */}
-      <section id="home"><Hero /></section>
-      <section id="services"><Service /></section>
-      <section id="portfolio"><Portfolio /></section>
-      <section id="contact"><Contact /></section>
+   <p>Hello Bitches</p>>
 
 
 
