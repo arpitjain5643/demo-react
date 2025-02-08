@@ -1,27 +1,52 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-// import About from './pages/About';
-import Projects from './pages/Projects';
-import Particles from 'react-tsparticles';
-import ParticlesComponent from './pages/Particles';
-import Hero from './components/hero/Hero';
-import Portfolio from './components/portfolio/Portfolio';
-import Contact from './components/contact/Contact';
-import Service from './components/services/Services';
+// import Hero from "./components/hero/Hero";
+// import Services from "./components/services/Services";
+// import Portfolio from "./components/portfolio/Portfolio";
+// import Contact from "./components/contact/Contact";
 
-// import Contact from './pages/Contact';
-// import Navbar from './components/Navbar';
+import { lazy, Suspense } from "react";
+import LazyLoad from "react-lazyload";
+import UnderDevelopmentModal from "./pages/UnderDevelopmentModal";
+// import UnderDevelopmentModal from "./components/UnderDevelopmentModal";
 
-function App() {
+const Hero = lazy(() => import("./components/hero/Hero"));
+const Services = lazy(() => import("./components/services/Services"));
+const Portfolio = lazy(() => import("./components/portfolio/Portfolio"));
+const Contact = lazy(() => import("./components/contact/Contact"));
+
+const App = () => {
   return (
-    <div className='container1'>
-   <p>Hello Bitches</p>
-
-
-
+    <div className="container">
+      <UnderDevelopmentModal/>
+      <Suspense fallback={"loading..."}>
+        <LazyLoad height={"100vh"} offset={-100}>
+          <section id="#home">
+            <Hero />
+          </section>
+        </LazyLoad>
+      </Suspense>
+      <Suspense fallback={"loading..."}>
+        <LazyLoad height={"100vh"} offset={-100}>
+          <section id="#services">
+            <Services />
+          </section>{" "}
+        </LazyLoad>
+      </Suspense>
+      <Suspense fallback={"loading..."}>
+        <LazyLoad height={"600vh"} offset={-100}>
+          {/* <section id="#portfolio"> */}
+          <Portfolio />
+          {/* </section> */}{" "}
+        </LazyLoad>
+      </Suspense>
+      <Suspense fallback={"loading..."}>
+        <LazyLoad height={"100vh"} offset={-100}>
+          <section id="#contact">
+            <Contact />
+          </section>{" "}
+        </LazyLoad>
+      </Suspense>
     </div>
   );
-}
+};
 
 export default App;
